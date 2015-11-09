@@ -377,6 +377,7 @@ header {
 .features {
 	height: auto;
 	padding: 130px 0;
+
 	@media (min-width: 1200px) {
 		height: 1020px; 
 		position: relative;
@@ -444,6 +445,36 @@ footer {
     	-o-transition: all 1s ease; 
     	transition: all 1s ease; 
     }  
+}
+
+.fa-facebook {
+	&:hover {
+		background: #3B5998; 
+	}
+}
+
+.fa-twitter {
+	&:hover {
+		background: #55ACEE; 
+	}
+}
+
+.fa-google-plus {
+	&:hover {
+		background: #DC4E41; 
+	}
+}
+
+.fa-youtube-play {
+	&:hover {
+		background: #CD201F; 
+	}
+}
+
+.fa-instagram {
+	&:hover {
+		background: #3f729b;
+	}
 }
 
 .footer-anchor {
