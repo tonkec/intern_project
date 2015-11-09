@@ -4,6 +4,8 @@
 	box-sizing: border-box; 
 }
 
+
+
 .nav {
 	width: 100%;
 	background: $dark-blue-primary;
@@ -107,12 +109,7 @@
 
 
 header {
-	background-image: url(../img/hero-background.png); 
-	background-position: center center;
-	-webkit-background-size: cover; 
-	-o-background-size: cover; 
-	background-size: cover;  
-	background-repeat: no-repeat;
+	
 	width: 100%;
 	position: relative;
 	height: auto;
@@ -377,6 +374,7 @@ header {
 .features {
 	height: auto;
 	padding: 130px 0;
+	background: #fff;
 
 	@media (min-width: 1200px) {
 		height: 1020px; 
@@ -516,6 +514,7 @@ footer {
 	z-index: 9999;
 	width: 100%;  
 	background: $dark-blue-button;
+	display: none;
 	
 	@media (min-width: 768px) {
 		width: 50%; 
