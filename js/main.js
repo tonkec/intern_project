@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  runPreloader();
   $(".sidebar-open").click(function(){
    openNav();
   });
@@ -35,4 +36,11 @@ $(document).ready(function(){
     }
   });
 });
+
+  function runPreloader () {
+  $('.preloader-con').delay(3000).fadeOut('slow'); 
+  setTimeout(function(){
+    $("body, html").css("overflow", "visible");
+  }, 3000)
+}
 });
