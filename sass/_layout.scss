@@ -26,6 +26,10 @@
 .logo-brand {
 	cursor: pointer;
 	height: 52px; 
+	width: 150px; 
+	
+	@include bg("../img/lorem-logo.png");
+	@include retina("../img/lorem-logo@2x.png", 218px 74px);
 }
 
 .left {
@@ -147,9 +151,12 @@ header {
 	}
 	
 	@media (min-width: 1200px) {
-		width: 70%; 
+		width: 60%; 
 		padding-left: 100px; 
+	}
 
+	@media (min-width: 1300px) {
+		width: 70%; 
 	} 
 }
 
@@ -194,6 +201,10 @@ header {
 
 	@media (min-width: 1200px) {
 		padding: 0 50px;
+	}
+
+	@media (min-width: 1600px) {
+		padding: 0 100px;
 	}
 }
 
@@ -333,11 +344,11 @@ header {
 
 .feature-img {
 	margin: 0 auto 40px; 
-	width: 108px;
-	height: 108px;
-	-webkit-background-size: cover; 
-	-o-background-size: cover; 
-	background-size: cover; 
+	width: 105px;
+	height: 105px;
+	-webkit-background-size: auto 100%; 
+	 -o-background-size: auto 100%; 
+	 background-size: auto 100%;  
 	background-repeat: no-repeat;
 	background-position: center center;
 
@@ -411,13 +422,16 @@ header {
 
 footer {
 	background: $dark-blue-primary;
-	height: auto; 
 	padding-top: 56px;
 	position:relative; 
 	padding-bottom: 50px;
+	height: auto;
+	@media (min-width: 480px) {
+		height: 560px; 
+	}
 	
-	@media (min-width: 1200px) {
-		padding-bottom: 0; 
+	@media (min-width: 980px) {
+		padding-bottom: 0;
 		height: 560px; 
 	}
 }
@@ -526,13 +540,20 @@ footer {
 
 .footer-heading {
 	color: #fff;
-	margin-top: 180px;
 	text-align: center;
-	font-size: 18px;
-	font-weight: 300;  
+	font-size: 20px;
+	font-weight: 100;  
 	
 	@media (min-width: 768px) {
 		font-size: 24px; 
+	}
+
+	@media (min-width: 980px) {
+		font-size: 28px; 
+	}
+	
+	@media (min-width: 1200px) {
+		font-size: 32px; 
 	} 
 }
 
@@ -541,8 +562,14 @@ footer {
 }
 
 .footer-container {
+	@media (min-width: 480px) {
+		position: absolute;
+	bottom: 120px;
+	left: 0;
+	right: 0;
 	margin: 0 auto;
-	margin-top: 94px; 
+	text-align: center; 
+	}	
 }
 
 .footer-logo {
@@ -680,8 +707,23 @@ footer {
 
 .heart {
 	display: inline-block;
-	height: 22px;
-	width: 25px;
-	@include bg("../img/love-icon.png");
+	height: 36px;
+	width: 30px;
+	-webkit-background-size: 100%; 
+	 -o-background-size: 100%; 
+	 background-size: 100%;  
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-image: url("../img/love-icon.png"); 
 	@include retina("../img/love-icon@2x.png", 50px 44px);
+}
+
+.vertical-footer-align {
+	@media (min-width: 480px) {
+		width: 100%; 
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%); 
+	} 
 }

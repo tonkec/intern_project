@@ -9,6 +9,8 @@ html {
 	width: 100%;
 	font-family: "Source Sans Pro", sans-serif;
 	overflow: hidden;
+	-ms-overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 .vertical-align {
