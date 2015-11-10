@@ -4,8 +4,6 @@
 	box-sizing: border-box; 
 }
 
-
-
 .nav {
 	width: 100%;
 	background: $dark-blue-primary;
@@ -109,7 +107,6 @@
 
 
 header {
-	
 	width: 100%;
 	position: relative;
 	height: auto;
@@ -128,9 +125,13 @@ header {
 }
 
 .medium {
-	width: 50%;
+	width: 90%;
 	margin: 0 auto; 
 	text-align: center;
+	
+	@media (min-width: 768px) {
+		width: 50%; 
+	}
 	@media (min-width: 1200px) {
 		width: 30%;
 		text-align: right; 
@@ -156,18 +157,23 @@ header {
 	-webkit-border-radius: 50%; 
 	border-radius: 50%; 
 	border: 8px solid #fff; 
-	height: auto;
-	margin: 50px 0;
-	width: 100%; 
+	height: 260px;
+	width: 260px; 
+	margin: 50px auto;
+	@include bg("../img/hero-image.png");
 	
 	@media (min-width: 768px) {
-		width: 80%; 
+		width: 360px;
+		height: 360px;  
 	}
+	
 	@media (min-width: 1200px) {
 		width: 360px;
 		height: 360px;
 		margin: 0 auto;  
 	}
+
+	@include retina("../img/hero-image@2x.png", 500px 500px);
 }
 
 .small {
@@ -242,7 +248,7 @@ header {
 	@media (min-width: 980px) {
 		padding: 0 100px;
 	}
- 	@media (min-width: 1300px) {
+	@media (min-width: 1300px) {
 		padding: 0 200px; 
 	}
 }
@@ -326,9 +332,29 @@ header {
 }
 
 .feature-img {
-	margin-bottom: 40px; 
+	margin: 0 auto 40px; 
 	width: 108px;
-	height: 108px; 
+	height: 108px;
+	-webkit-background-size: cover; 
+	-o-background-size: cover; 
+	background-size: cover; 
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	&.one {
+		background-image: url(../img/feature-one-icon.png);
+		@include retina("../img/feature-one-icon@2x.png", 160px 160px);
+	}
+
+	&.two {
+		background-image: url(../img/feature-two-icon.png);
+		@include retina("../img/feature-two-icon@2x.png", 160px 160px);
+	}
+
+	&.three {
+		background-image: url(../img/feature-three-icon.png);
+		@include retina("../img/feature-three-icon@2x.png", 160px 160px);
+	}
 }
 
 .img-subheading {
@@ -385,9 +411,15 @@ header {
 
 footer {
 	background: $dark-blue-primary;
-	height: 560px; 
+	height: auto; 
 	padding-top: 56px;
 	position:relative; 
+	padding-bottom: 50px;
+	
+	@media (min-width: 1200px) {
+		padding-bottom: 0; 
+		height: 560px; 
+	}
 }
 
 .footer-right {
@@ -401,8 +433,14 @@ footer {
 }
 
 .col-img {
-	display: inline-block;
-	margin-right: 2%;
+	display: block;
+	margin: 30px auto 0;
+
+	@media (min-width: 480px) {
+		display: inline-block;
+		margin: 0;
+		margin-right: 2%;
+	}
 	
 	@media (min-width: 980px) {
 		margin-right: 36px; 
@@ -411,10 +449,15 @@ footer {
 }
 
 .icons-container {
-	margin-left: 5%;
+	margin-top: 50px; 
+	text-align: center;
+	@media (min-width: 480px) {
+		margin-top: 0; 
+		text-align: left;
+		margin-left: 50px; 
+	}
 	@media (min-width: 1200px) {
 		margin-left: 100px; 
-
 	}
 }
 
@@ -427,22 +470,22 @@ footer {
 	height: 62px;
 	width: 62px;
 	line-height: 62px;
-    text-align: center;
-    font-size: 1.7em;
-    font-weight: 700;
-    position: relative;
-    
-    &:hover,
-    &:focus {
-    	top: 2px; 
-    	background: $red;
-    	color: #fff;
-    	-webkit-transition: all 1s ease; 
-    	-moz-transition: all 1s ease; 
-    	-ms-transition: all 1s ease; 
-    	-o-transition: all 1s ease; 
-    	transition: all 1s ease; 
-    }  
+	text-align: center;
+	font-size: 1.7em;
+	font-weight: 700;
+	position: relative;
+
+	&:hover,
+	&:focus {
+		top: 2px; 
+		background: $red;
+		color: #fff;
+		-webkit-transition: all 1s ease; 
+		-moz-transition: all 1s ease; 
+		-ms-transition: all 1s ease; 
+		-o-transition: all 1s ease; 
+		transition: all 1s ease; 
+	}  
 }
 
 .fa-facebook {
@@ -485,8 +528,12 @@ footer {
 	color: #fff;
 	margin-top: 180px;
 	text-align: center;
-	font-size: 24px;
-	font-weight: 300;   
+	font-size: 18px;
+	font-weight: 300;  
+	
+	@media (min-width: 768px) {
+		font-size: 24px; 
+	} 
 }
 
 .footer-span {
@@ -496,6 +543,14 @@ footer {
 .footer-container {
 	margin: 0 auto;
 	margin-top: 94px; 
+}
+
+.footer-logo {
+	margin: 0 auto;
+	width: 120px;
+	height: 21px;  
+	@include bg("../img/ars-logo@2x.png");
+	@include retina("../img/ars-logo@2x.png", 240px 42px);
 }
 
 .hidden-xs {
@@ -537,10 +592,10 @@ footer {
 	@media (min-width: 768px) {
 		top: 0;
 		-webkit-transform: none; 
-		 -moz-transform: none; 
-		 -ms-transform: none; 
-		 -o-transform: none; 
-		 transform: none;  
+		-moz-transform: none; 
+		-ms-transform: none; 
+		-o-transform: none; 
+		transform: none;  
 		margin-top: 100px;
 		position: static;
 		text-align: left; 
@@ -618,4 +673,15 @@ footer {
 .futura {
 	text-transform: initial;  
 	font-weight: 300; 
+	color: #fff;
+	opacity: .9;
+	font-family: Lato; 
+}
+
+.heart {
+	display: inline-block;
+	height: 22px;
+	width: 25px;
+	@include bg("../img/love-icon.png");
+	@include retina("../img/love-icon@2x.png", 50px 44px);
 }
