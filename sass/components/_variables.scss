@@ -3,25 +3,6 @@ $dark-blue-button: #1E2731;
 $red: #CD5741;
 $white: #FFFFFF;
 
-body,
-html {
-	height: 100%;
-	width: 100%;
-	font-family: "Source Sans Pro", sans-serif;
-	overflow: hidden;
-	-ms-overflow-x: hidden;
-	overflow-x: hidden;
-}
-
-.vertical-align {
-	@media (min-width: 1200px) {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);  
-	} 
-}
-
 @mixin retina($img, $size) {
 	@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
 	only screen and (-moz-min-device-pixel-ratio: 1.5),

@@ -9,7 +9,6 @@ $(document).ready(function(){
  })
 
   function openNav() {
-   $(".sidebar-con").css("display", "block")
    $(".sidebar-con").animate({
     right: 0
   },1000, function(){
@@ -41,11 +40,10 @@ $(document).ready(function(){
   });
 });
 
-
  function runPreloader () {
   $('.preloader-con').delay(3000).fadeOut('slow'); 
   setTimeout(function(){
-    $("body, html").css("overflow-y", "visible");
+    $("body, html").css("overflow", "visible");
   }, 3000)
   }
 });
