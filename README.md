@@ -24,5 +24,5 @@
 * [Custom Hover Effects](http://tonkec.github.io/text_hover_effects/index.html)
 * [Preloader](http://webdesign.tutsplus.com/tutorials/creating-a-collection-of-css3-animated-pre-loaders--cms-21978)
 * [Parallax](http://pixelcog.github.io/parallax.js/)
-* [Font Aweseome](https://fortawesome.github.io/Font-Awesome/)
+* [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
 * No Frameworks
